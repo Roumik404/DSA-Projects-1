@@ -30,7 +30,6 @@ def search(index, docs, query):
             for doc_id in index.get(w, []):
                 results.add(doc_id)
                 scores[doc_id] = scores.get(doc_id, 0) + 1
-        # Sort by relevance score
         results = sorted(results, key=lambda d: scores[d], reverse=True)
         return results
     return list(results)
