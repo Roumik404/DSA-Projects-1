@@ -58,6 +58,9 @@ def main():
     maze = generate_maze(rows, cols, density)
     start, end = (0,0), (rows-1, cols-1)
 
+    print("\nGenerated Maze:")
+    print_maze(maze)
+    
     print("\n--- Maze Solver ---")
     print("Choose algorithm: 1. BFS  2. DFS")
     choice = input("Enter choice: ")
